@@ -9,7 +9,14 @@ export class List extends React.Component {
       return (
         <li>
           #{todo.id}
-          {todo.title}
+          {todo.title}&nbsp;&nbsp;
+          <button
+            onClick={() => {
+              this.props.deletetodo(todo.id);
+            }}
+          >
+            消す
+          </button>
         </li>
       );
     });
