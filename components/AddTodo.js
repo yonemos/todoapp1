@@ -10,16 +10,15 @@ export class AddTodo extends React.Component {
     return (
       <div>
         <h2>AddTodo</h2>
-        <label for="name1">
-          <form onSubmit={this.handleSubmit}>
-            <input
-              value={this.state.title}
-              onChange={this.handleChange}
-              id="name1"
-            />
-            <input type="submit" value="Add To do List" />
-          </form>
-        </label>
+
+        <form onSubmit={this.handleSubmit}>
+          <input
+            value={this.state.title}
+            onChange={this.handleChange}
+            id="name1"
+          />
+          <input type="submit" value="Add To do List" />
+        </form>
       </div>
     );
   }

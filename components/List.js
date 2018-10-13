@@ -5,14 +5,15 @@ export class List extends React.Component {
     super(props);
   }
   render() {
-    const list = this.props.todos.map(todo => {
+    const { deletetodo, todos } = this.props;
+    const list = todos.map(todo => {
       return (
-        <li>
+        <li key={todo.id}>
           #{todo.id}
           {todo.title}&nbsp;&nbsp;
           <button
             onClick={() => {
-              this.props.deletetodo(todo.id);
+              deletetodo(todo.id);
             }}
           >
             消す
